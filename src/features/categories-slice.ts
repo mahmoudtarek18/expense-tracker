@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice, nanoid } from '@reduxjs/toolkit'
-import { addExpense, editExpense, removeExpense } from './expenses-slice'
+import { addExpense, removeExpense } from './expenses-slice'
 import { ApplicationState } from './store'
 
 export type Category = {
