@@ -68,13 +68,6 @@ const categoriesSlice = createSlice({
       )
       state.entities[index].budget += action.payload.amount
     }),
-      // builder.addCase(editExpense, (state, action) => {
-      //   const index = state.entities.findIndex(
-      //     (category) => category.id === action.payload.expense.categoryId,
-      //   )
-      //   state.entities[index].budget -= action.payload.oldAmount
-      //   state.entities[index].budget += action.payload.expense.amount
-      // }),
       builder.addCase(removeExpense, (state, action) => {
         const index = state.entities.findIndex(
           (category) => category.id === action.payload.categoryId,

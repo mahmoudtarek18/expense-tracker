@@ -37,7 +37,6 @@ describe('👉 test text in CreateExpense', async () => {
     fireEvent.change(dateField, { target: { value: '2023-11-11' } })
     fireEvent.click(button)
 
-    // first: click the button before filling the data to show the error message
     expect(screen.queryByText(/Please fill all fields/i)).not.toBeInTheDocument()
   })
 })

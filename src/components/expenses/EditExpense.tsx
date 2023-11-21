@@ -62,8 +62,8 @@ const EditExpense = ({
     }
 
     setCatErrorMessage('')
-    const oldCategory = categories.find((cat) => cat.id === expense.categoryId)!
     if (category.id !== expense.categoryId) {
+      const oldCategory = categories.find((cat) => cat.id === expense.categoryId)!
       dispatch(editCategory({ ...oldCategory, budget: oldCategory.budget - expense.amount }))
       dispatch(editCategory({ ...category, budget: catBudget + expenseDate.amount }))
     } else {
